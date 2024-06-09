@@ -21,7 +21,9 @@ public class StudentMain {
 				break;
 			case 2:
 				System.out.println("검색");
-				
+				n = new Scanner(System.in);
+				String numsearch = n.next();
+				Search.StudentSearch(numsearch);
 				break;
 			case 3:
 				System.out.println("삭제");

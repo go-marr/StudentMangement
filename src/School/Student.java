@@ -1,17 +1,21 @@
 package School;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
 import java.util.Scanner;
 
-class Student{
+class Student {
+	
 	static public ArrayList<Student> totStudent = new ArrayList<>();
+	
 	String name;
 	String dept;
-	int studentNum;
+	String studentNum;
 	String address;
 	String phoneNum;
 
-	public Student(String name,String dept,int studentNum, String address, String phoneNum) {
+	public Student(String name,String dept,String studentNum, String address, String phoneNum) {
 		this.name=name;
 		this.dept=dept;
 		this.studentNum=studentNum;
@@ -25,7 +29,7 @@ class Student{
 	public String getDept() {
 		return dept;
 	}
-	public int getStudentNum() {
+	public String getStudentNum() {
 		return studentNum;
 	}
 	public String getAddress() {
@@ -34,6 +38,7 @@ class Student{
 	public String getPhoneNum() {
 		return phoneNum;
 	}
+
 	public String toString() {
 		return "이름 : " + name +"\n학과 : " + dept + "\n학번 : " + studentNum +"\n주소 : "+ address + "\n전화번호 : " + phoneNum+"\n";
 	}
@@ -49,7 +54,7 @@ class Student{
 		String dept = s.next();
 		
 		System.out.print("학번 : ");
-		int studentNum = s.nextInt();
+		String studentNum = s.next();
 		
 		System.out.print("주소: ");
 		String address = s.next();
@@ -58,11 +63,14 @@ class Student{
 		String phonenum = s.next();
 	
 		
-		Student s1  = new Student(name, dept, studentNum, address, phonenum);
+		Student s1 = new Student(name, dept, studentNum, address, phonenum);
 		totStudent.add(s1);
 		
 		System.out.println(totStudent.toString());
 	}
+	public static void main(String[] args) {
+		
 	
 	
+	}
 }
