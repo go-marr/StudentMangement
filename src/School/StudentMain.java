@@ -28,7 +28,10 @@ public class StudentMain {
 				break;
 			case 3:
 				System.out.println("삭제");
-			
+				n = new Scanner(System.in);
+				String numd = n.next();
+				Delete.DeleteStudent(Search.StudentSearch(numd));
+				System.out.println("삭제 됨");
 				break;
 			case 4:
 				System.out.println("수정");

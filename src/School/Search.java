@@ -5,7 +5,7 @@ import java.util.Iterator;
 
 public class Search {
 	
-	static void StudentSearch(String numsearch) {
+	static Student StudentSearch(String numsearch) {
 
 		int id = 0;
 		Collection<Student> c = Student.totStudent;
@@ -17,13 +17,14 @@ public class Search {
 			for(int k =0; k<c.size();k++) {
 				numArr[k] = it.next().getStudentNum();
 			}
+		}
 		for(int k =0;k<numArr.length;k++) {
 			if(numsearch.equals(numArr[k])) {
 				id = k;
 			}
 		}
 		System.out.println(Student.totStudent.get(id));
-		}
+		return Student.totStudent.get(id);
 	}
 	
 	
