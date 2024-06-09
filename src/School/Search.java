@@ -11,7 +11,7 @@ public class Search {
 		Collection<Student> c = Student.totStudent;
 		Iterator<Student> it = c.iterator();
 		
-		String[] numArr = new String[c.size()];
+		String[] numArr = new String[c.size()]; 
 		
 		while(it.hasNext()) {
 			for(int k =0; k<c.size();k++) {
