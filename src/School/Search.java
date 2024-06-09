@@ -23,6 +23,8 @@ public class Search {
 			}
 		}
 		System.out.println(Student.totStudent.get(id));
-			}
-	}	
+		}
+	}
+	
+	
 }
