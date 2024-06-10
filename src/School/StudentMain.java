@@ -22,13 +22,13 @@ public class StudentMain {
 			case 2:
 				System.out.println("검색");
 				System.out.println("학번 : ");
-				n = new Scanner(System.in);
+
 				String numsearch = n.next();
 				Search.StudentSearch(numsearch);
 				break;
 			case 3:
 				System.out.println("삭제");
-				n = new Scanner(System.in);
+		
 				System.out.println("삭제할 학번 : ");
 				String numd = n.next();
 				Delete.DeleteStudent(Search.StudentSearch(numd));
