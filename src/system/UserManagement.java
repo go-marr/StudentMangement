@@ -104,22 +104,26 @@ public class UserManagement {
 		switch(n){
 			case 1:
 				input();
+				menu(Menuview.run());
 				break;
 			case 2:
 				search();
+				menu(Menuview.run());
 				break;
 			case 3:
 				Student searchStudent = search();
+				menu(Menuview.run());
 				delete(searchStudent);
 				
 				break;
 			case 4:
 				searchStudent = search();
 				update(searchStudent);
-				
+				menu(Menuview.run());
 				break;
 			case 5:
 				userList();
+				menu(Menuview.run());
 				break;
 		}
 	
