@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 
 
-public class Student{
+public class Student extends User{
 
 	static public ArrayList<Student> totStudent = new ArrayList<>();
 	
