@@ -2,9 +2,11 @@ package system;
 
 import java.util.Collection;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Scanner;
 
 import user.Student;
+import view.Menuview;
 
 public class UserManagement {
 
@@ -37,8 +39,11 @@ public class UserManagement {
 	
 	
 	//대상 검색
-	static public Student search(String numsearch) {
-
+	static public Student search() {
+		Scanner n = new Scanner(System.in);
+		n = new Scanner(System.in);
+		String searchnum = n.next();
+		
 		int id = 0;
 		Collection<Student> c = Student.totStudent;
 		Iterator<Student> it = c.iterator();
@@ -51,7 +56,7 @@ public class UserManagement {
 			}
 		}
 		for(int k =0;k<numArr.length;k++) {
-			if(numsearch.equals(numArr[k])) {
+			if(searchnum.equals(numArr[k])) {
 				id = k;
 			}
 		}
@@ -91,6 +96,61 @@ public class UserManagement {
 			System.out.println(it.next());
 		}
 	}
+	
+	
+	
+	
+	static public void menu(int n) {		
+		switch(n){
+			case 1:
+				input();
+				break;
+			case 2:
+				search();
+				break;
+			case 3:
+				Student searchStudent = search();
+				delete(searchStudent);
+				
+				break;
+			case 4:
+				searchStudent = search();
+				update(searchStudent);
+				
+				break;
+			case 5:
+				userList();
+				break;
+		}
+	
+	}	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 
 
-public class Student {
+public class Student{
 
 	static public ArrayList<Student> totStudent = new ArrayList<>();
 	
